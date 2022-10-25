@@ -52,7 +52,7 @@ export function Home(props) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ eventId: eventId })
             };
-            await fetch('/delete', requestOptions)
+            await fetch('/api/delete', requestOptions)
                 .then(updateStateAfterDeletingEvent(e));
         }
     }

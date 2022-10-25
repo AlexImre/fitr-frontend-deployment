@@ -50,7 +50,7 @@ export const LoginPage = (props) => {
                 pw: password
             })
         };
-        await fetch('/login', requestOptions)
+        await fetch('/api/login', requestOptions)
             .then((res) => handleLogin(res));
     }
 

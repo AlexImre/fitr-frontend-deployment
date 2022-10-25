@@ -16,7 +16,7 @@ export const Header = (props) => {
             headers: { 'Content-Type': 'application/json'},
         };
         // CHECK IF AFTER LOGOUT YOU CAN JUST GO STRAIGHT BACK TO /HOME! 
-        await fetch('/logout', requestOptions)
+        await fetch('/api/logout', requestOptions)
             .then(navigate('/Login'));
     }
 

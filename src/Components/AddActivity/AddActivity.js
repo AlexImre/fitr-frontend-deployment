@@ -39,7 +39,7 @@ export const AddActivity = (props) => {
             }
         })
     };
-    await fetch('/addEvent', requestOptions)
+    await fetch('/api/addEvent', requestOptions)
       .then(res => res.json(res))
       .then(res => updateStateAfterAddingEvent(res));
 }
