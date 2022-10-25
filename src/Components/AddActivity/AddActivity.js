@@ -18,10 +18,11 @@ export const AddActivity = (props) => {
     props.setNewEvent(event);
   }
   const handleAddEvent = (e) => {
-    if (newEvent.length === 0 || isNaN(newEvent) || newEvent.length > 500) {
-        window.alert('Please enter valid length of activity.');
-        return;
-    }
+    if (newEvent.length === 0 || isNaN(newEvent.length) || newEvent.length > 500) {
+      console.log('number was 0')
+      window.alert('Please enter valid length of activity.');
+      return;
+    }    
     if(!newEvent.activity) {
         window.alert('Please select valid activity.');
         return;
