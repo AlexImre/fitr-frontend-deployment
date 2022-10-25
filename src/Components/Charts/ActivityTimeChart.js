@@ -142,5 +142,5 @@ export const ActivityTimeChart = (props) => {
             })
         }
     
-    return <Bar options={options} data={data} />;
+    return <Bar options={options} data={data} height={400} />;
 }

@@ -79,8 +79,7 @@ export const AddActivity = (props) => {
           <div className='AddActivityLengthWrapper'>
               <span className='AddActivityLabel'>Length (mins)</span>
               <div className='AddActivityLength'>
-                <input type="number" className='AddActivityInput' placeholder="Length of activity (mins)" value={Number(newEvent.length)}
-                  onChange={(e) => setNewEvent({...newEvent, length: Number(e.target.value)})}
+                <input type="number" className='AddActivityInput' onChange={(e) => setNewEvent({...newEvent, length: Number(e.target.value)})}
                 />
               </div>
           </div>

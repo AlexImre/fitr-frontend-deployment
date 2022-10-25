@@ -76,7 +76,7 @@ export const LoginPage = (props) => {
                         <input className='LoginInput' type="password" name="pw" onChange={handlePassword} />
                         {showFailureMessage? <span className='LoginFailureMessage'>Invalid Username or Password</span> : ''}
                         <button className='button-1' onClick={(e) => login(e)}>Login</button>
-                        <span className='LoginRegisterPrompt'>Not registered? <Link to="/Register" className='LoginRegisterLink'><strong>Create an account</strong></Link></span>
+                        <span className='LoginRegisterPrompt'>No account? <Link to="/Register" className='LoginRegisterLink'><strong>Register here</strong></Link></span>
                     </div>
                 </div>
             </form>

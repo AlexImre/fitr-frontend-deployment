@@ -21,9 +21,11 @@ ChartJS.register(
 
 export function TotalTimeChart(props) {
     // GET DATA ONLY FOR YEAR === 2022??
+    // HOW TO MAKE indexAxis only Y on mobile??? ALso change height for mobile
     const allEvents = props.allEvents;
     const options = {
-        responsive: true,
+      indexAxis: 'y',  
+      responsive: true,
         plugins: {
           legend: {
             position: 'top',
@@ -76,39 +78,52 @@ export function TotalTimeChart(props) {
       
       const data = {
         labels,
-        datasets: [
-          {
+        datasets: []
+      };
+
+      if ( monthlyRunningDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
             label: 'Running',
             data: monthlyRunningDataArray,
             backgroundColor: '#ef476f',
-          },
-          {
+        })
+      }
+      if ( monthlyCyclingDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
             label: 'Cycling',
             data: monthlyCyclingDataArray,
             backgroundColor: '#f78c6b',
-          },
-          {
+        })
+      }
+      if ( monthlyRowingDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
             label: 'Rowing',
             data: monthlyRowingDataArray,
             backgroundColor: '#ffd166',
-          },
-          {
-            label: 'Gym',
-            data: monthlyGymDataArray,
-            backgroundColor: '#06d6a0',
-          },
-          {
+        })
+      }
+      if ( monthlyYogaDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
             label: 'Yoga',
             data: monthlyYogaDataArray,
             backgroundColor: '#118ab2',
-          },
-          {
+        })
+      }
+
+      if ( monthlyGymDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
+            label: 'Gym',
+            data: monthlyGymDataArray,
+            backgroundColor: '#06d6a0',
+        })
+      }
+      if ( monthlyOtherDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
+        data.datasets.push({
             label: 'Other',
             data: monthlyOtherDataArray,
             backgroundColor: '#073b4c',
-          },
-        ]
-      };
+        })
+      }
 
-  return <Bar options={options} data={data} />;
+  return <Bar options={options} data={data} height={500} />;
 }
