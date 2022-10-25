@@ -1,1 +1,5 @@
+/Home https://lovely-paletas-e7e692.netlify.app/Home 200
+/Analytics https://lovely-paletas-e7e692.netlify.app/Analytics 200
+/Login https://lovely-paletas-e7e692.netlify.app/Login 200
+/Register https://lovely-paletas-e7e692.netlify.app/Register 200
 /api/*  https://fitr-backend-production.up.railway.app/:splat 200
