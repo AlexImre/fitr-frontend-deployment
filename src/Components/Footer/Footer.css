@@ -1,0 +1,18 @@
+.FooterContainer {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: #292f36;
+}
+
+.fa-brands {
+    font-size: 24px;
+    padding: 0.75rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.fa-brands:hover {
+    color: #4ecdc4;
+}

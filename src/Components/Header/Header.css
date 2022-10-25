@@ -1,0 +1,101 @@
+.HeaderTitleContainer {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #292f36;
+    height: 90px;
+    font-family: 'Roboto';
+}
+  
+.fa-person-running {
+    font-size: 40px;
+    margin: 0 1.5rem 0 1.5rem;
+    color: #4ecdc4;
+}
+
+.HeaderLogo {
+    padding-bottom: 6px;
+    margin: 1rem;
+    flex-wrap: nowrap;
+}
+
+.HeaderTitleLeft {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.HeaderTitleRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 24px;
+}
+
+.HeaderLogoTitle {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.HeaderHomeTitle {
+    font-size: 24px;
+    padding: 0 1rem 0 1rem;
+}
+
+.HeaderLogoutTitle {
+    font-size: 24px;
+    color:#5e7e79;
+    padding: 0 1rem 0 1rem;
+}
+
+.HeaderLogoutTitle:hover {
+    text-decoration: underline;
+    color: #4ecdc4;
+    cursor: pointer;
+}
+
+.HeaderAnalyticsTitle {
+    font-size: 24px;
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+}
+
+.Link {
+    color:#fff;
+}
+
+.Link:hover {
+   color: #4ecdc4;
+}
+
+.fa-plus {
+    color: #292f36;
+}
+
+@media screen and (max-width: 768px) {
+    .HeaderTitleRight {
+        margin-left: none;
+        padding: none;
+        margin: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .HeaderActivity {
+        display: none;
+    }
+
+    .HeaderLogoTitle {
+        display: none;
+    }
+
+    .HeaderLogo {
+        margin: 0;
+    }
+
+    .HeaderHomeTitle {
+        padding: 0;
+    }
+}

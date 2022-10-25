@@ -1,0 +1,118 @@
+.LoginMasterContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+.LoginContainer {
+    display: flex;
+    justify-content: center;
+    font-family: 'poppins';
+}
+
+.LoginWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5rem 4rem 5rem;
+    margin-top: 5rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+    font-size: 14px;
+}
+
+.LoginTitle {
+    text-align: center;
+    font-size: 42px;
+    margin: 1.5rem;
+}
+
+.LoginLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #cbeeec;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+}
+
+.LoginAccess {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.LoginInput {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 25px !important;
+}
+
+
+.LoginInput:focus {
+    outline: auto #68cfc8;
+}
+
+.LoginPrompt {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.LoginRegisterPrompt {
+    padding-top: 5px;
+    font-size: 11px;
+}
+
+.LoginRegisterLink {
+    text-decoration: none;
+    color: black;
+}
+
+.LoginRegisterLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.LoginFailureMessage {
+    color: red;
+    padding-bottom: 10px;
+    font-size: 11px;
+}
+
+/* CSS */
+.button-1 {
+    background-color: #68cfc8;
+    border-radius: 3px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 25px;
+    /* line-height: 20px; */
+    /* list-style: none; */
+    outline: none;
+    /* padding: 10px 16px; */
+    /* position: relative; */
+    /* text-align: center; */
+    /* text-decoration: none; */
+    transition: color 100ms;
+    /* vertical-align: baseline; */
+    /* user-select: none; */
+    /* -webkit-user-select: none; */
+    /* touch-action: manipulation; */
+  }
+  
+  .button-1:hover,
+  .button-1:focus {
+    background-color: #88d6d1;
+  }

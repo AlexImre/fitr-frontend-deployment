@@ -1,0 +1,53 @@
+.AddActivityContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AddActivityWrapper {
+  border: solid 1px rgb(30, 30, 31);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 20px;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: #292f36;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'poppins';
+}
+
+.AddActivitySelectWrapper {
+  text-align: left;
+}
+
+.AddActivityDateWrapper {
+  text-align: left;
+}
+
+.AddActivityLengthWrapper {
+  text-align: left;
+}
+
+.AddActivitySelect {
+  width: 181px;
+  padding: 0;
+  margin: 0;
+  height: 25px;
+  border: none;
+}
+
+.AddActivityLabel {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.AddActivityDatePicker {
+  height: 25px;
+}
+
+input {
+  width: 181px;
+  padding: 0;
+  margin: 0;
+  height: 25px;
+}
