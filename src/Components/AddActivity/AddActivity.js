@@ -36,7 +36,8 @@ export const AddActivity = (props) => {
   }
 
   const updateStateAfterAddingEvent = (res) => {
-    setAllEvents([...allEvents, res[0].lastItem])
+    setAllEvents([...allEvents, res[0].lastItem]);
+    setNewEvent({activity: '', start: '', end: '', length: ''});
   }
 
   const addEvent = async (e) => {
