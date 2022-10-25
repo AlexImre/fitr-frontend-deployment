@@ -142,5 +142,12 @@ export const ActivityTimeChart = (props) => {
             })
         }
     
-    return <Bar options={options} data={data} height={400} />;
+    const getHeight = () => {
+        if (window.screen.width <= 640) {
+            return 500;
+        }
+        return '';
+    }
+
+    return <Bar options={options} data={data} height={getHeight()} />;
 }

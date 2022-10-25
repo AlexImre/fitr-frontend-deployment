@@ -88,6 +88,7 @@ export function TotalTimeChart(props) {
             backgroundColor: '#ef476f',
         })
       }
+
       if ( monthlyCyclingDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
         data.datasets.push({
             label: 'Cycling',
@@ -95,6 +96,7 @@ export function TotalTimeChart(props) {
             backgroundColor: '#f78c6b',
         })
       }
+
       if ( monthlyRowingDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
         data.datasets.push({
             label: 'Rowing',
@@ -102,6 +104,7 @@ export function TotalTimeChart(props) {
             backgroundColor: '#ffd166',
         })
       }
+
       if ( monthlyYogaDataArray.reduce((partialSum, a) => partialSum + a, 0) > 0) {
         data.datasets.push({
             label: 'Yoga',
@@ -125,5 +128,12 @@ export function TotalTimeChart(props) {
         })
       }
 
-  return <Bar options={options} data={data} height={500} />;
+      const getHeight = () => {
+        if (window.screen.width <= 640) {
+            return 500;
+        }
+        return 200;
+    }
+
+  return <Bar options={options} data={data} height={getHeight()} />;
 }
