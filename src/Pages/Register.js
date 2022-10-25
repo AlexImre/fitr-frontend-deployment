@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Footer } from '../Components/Footer/Footer';
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 export const Register = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState();
@@ -34,7 +39,7 @@ export const Register = () => {
             body: JSON.stringify({ uname: username, pw: password })
         };
         console.log(requestOptions.body);
-        await fetch('/api/register', requestOptions).then((res) => handleRegisterStatuses(res));
+        await fetch(`${apiPath}/register`, requestOptions).then((res) => handleRegisterStatuses(res));
     }
 
     // method="post" action="register"

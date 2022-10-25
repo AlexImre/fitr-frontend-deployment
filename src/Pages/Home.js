@@ -6,6 +6,11 @@ import { Header } from '../Components/Header/Header';
 import { CalendarComponent } from '../Components/Calendar/CalendarComponent';
 import { Footer } from '../Components/Footer/Footer';
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 export function Home(props) {
     // STATE VARIABLES
     const newEvent = props.newEvent;
@@ -52,7 +57,7 @@ export function Home(props) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ eventId: eventId })
             };
-            await fetch('/api/delete', requestOptions)
+            await fetch(`${apiPath}/delete`, requestOptions)
                 .then(updateStateAfterDeletingEvent(e));
         }
     }

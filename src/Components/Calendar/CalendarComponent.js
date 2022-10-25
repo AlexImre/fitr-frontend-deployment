@@ -5,6 +5,7 @@ import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import './CalendarComponent.css';
 
 const locales = {
   "en-US": require('date-fns/locale/en-US')
@@ -57,7 +58,7 @@ export const CalendarComponent = (props) => {
       showAllEvents={true}
       allEvents
       enableAutoScroll={true}
-      style={{height: 600, margin: 50}} 
+      // style={{height: 600, margin: 50}} 
       onSelectEvent={props.handleEventSelection}
       eventPropGetter={eventStyleGetter} />
   </div>

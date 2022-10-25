@@ -1,0 +1,10 @@
+.rbc-calendar {
+    height: 600px;
+    margin: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .rbc-calendar {
+        margin: 0px;
+    }
+}

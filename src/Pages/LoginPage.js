@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { Footer } from '../Components/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 export const LoginPage = (props) => {
     // STATE VARIABLES
     const [username, setUsername] = useState();
@@ -50,7 +55,7 @@ export const LoginPage = (props) => {
                 pw: password
             })
         };
-        await fetch('/api/login', requestOptions)
+        await fetch(`${apiPath}/login`, requestOptions)
             .then((res) => handleLogin(res));
     }
 

@@ -24,6 +24,13 @@
     font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+    .LoginWrapper {
+        margin-top: 1rem;
+        padding: 3rem 4rem 3rem 4rem;
+    }
+}
+
 .LoginTitle {
     text-align: center;
     font-size: 42px;

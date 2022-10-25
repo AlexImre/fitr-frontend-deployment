@@ -3,6 +3,11 @@ import './Header.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 export const Header = (props) => {
 
     const setAllEvents = props.setAllEvents;
@@ -16,7 +21,7 @@ export const Header = (props) => {
             headers: { 'Content-Type': 'application/json'},
         };
         // CHECK IF AFTER LOGOUT YOU CAN JUST GO STRAIGHT BACK TO /HOME! 
-        await fetch('/api/logout', requestOptions)
+        await fetch(`${apiPath}/logout`, requestOptions)
             .then(navigate('/Login'));
     }
 
@@ -24,7 +29,7 @@ export const Header = (props) => {
         <div className="HeaderTitleContainer">
             <div className='HeaderTitleLeft'>
                 <div className='HeaderLogo'>
-                    <i className="fa-solid fa-person-running"></i>
+                    <i className="fa-solid fa-person-running header-running"></i>
                     <span className='HeaderLogoTitle'>Fitr</span>
                 </div>
                 <span className='HeaderHomeTitle'>

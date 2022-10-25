@@ -3,6 +3,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import './AddActivity.css';
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 export const AddActivity = (props) => {
 
   // PROPS
@@ -39,7 +44,7 @@ export const AddActivity = (props) => {
             }
         })
     };
-    await fetch('/api/addEvent', requestOptions)
+    await fetch(`${apiPath}/addEvent`, requestOptions)
       .then(res => res.json(res))
       .then(res => updateStateAfterAddingEvent(res));
 }

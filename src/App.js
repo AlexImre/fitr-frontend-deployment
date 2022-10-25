@@ -6,6 +6,11 @@ import { Register } from "./Pages/Register.js";
 import { LoginPage } from "./Pages/LoginPage.js";
 import { useNavigate, useLocation } from "react-router-dom";
 
+let apiPath = ''
+if (process.env.NODE_ENV === 'production') {
+    apiPath = '/api'
+}
+
 function App() {
   
   const [newEvent, setNewEvent] = useState({activity: '', start: '', end: '', length: 0});
@@ -23,7 +28,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' }
     }
     try {
-      await fetch('/api/auth', requestOptions)
+      await fetch(`${apiPath}/auth`, requestOptions)
         .then((res) => handleAuth(res))
     } catch (err) {
       console.log(err);
@@ -61,7 +66,7 @@ function App() {
   }
   try {
     console.log('You are fetching GET allEvents!');
-    await fetch('/api/allEvents', requestOptions)
+    await fetch(`${apiPath}/allevents`, requestOptions)
       .then(res => res.json())
       .then(res => handleAddAllEvents(res));
   } catch (err) {
