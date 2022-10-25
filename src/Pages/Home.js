@@ -29,17 +29,6 @@ export function Home(props) {
         }
     };
 
-    const handleAddEvent = () => {
-        if (newEvent.length === 0 || newEvent.length > 500) {
-            window.alert('Please enter valid length of activity.');
-            return;
-        }
-        if(!newEvent.activity) {
-            window.alert('Please select valid activity.');
-            return;
-        }
-    }
-
     // DELETE ACTIVITY
     const updateStateAfterDeletingEvent = (e) => {
         const updatedAllEventsArray = allEvents.filter((element) => element._id !== e._id);
@@ -88,7 +77,7 @@ export function Home(props) {
 
         {/* ADDACTIVITY SECTION */}
         <div className='AppAddActivityContainer'>
-            {showAddActivityMenu ? <AddActivity newEvent={newEvent} allEvents={allEvents} setAllEvents={setAllEvents} setNewEvent={setNewEvent} handleAddEvent={handleAddEvent} toggleActivityMenu={toggleActivityMenu} /> : '' }
+            {showAddActivityMenu ? <AddActivity newEvent={newEvent} allEvents={allEvents} setAllEvents={setAllEvents} setNewEvent={setNewEvent} toggleActivityMenu={toggleActivityMenu} /> : '' }
         </div>
         </>
     );

@@ -18,6 +18,15 @@ export const AddActivity = (props) => {
     props.setNewEvent(event);
   }
   const handleAddEvent = (e) => {
+    if (newEvent.length === 0 || isNaN(newEvent) || newEvent.length > 500) {
+        window.alert('Please enter valid length of activity.');
+        return;
+    }
+    if(!newEvent.activity) {
+        window.alert('Please select valid activity.');
+        return;
+    }
+
     addEvent(e);
     props.toggleActivityMenu();
   }
