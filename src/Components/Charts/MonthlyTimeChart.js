@@ -129,7 +129,7 @@ export function TotalTimeChart(props) {
       }
 
       const getHeight = () => {
-        if (window.screen.width <= 640) {
+        if (window.screen.width <= 480) {
             return 500;
         }
         return 200;

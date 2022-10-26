@@ -23,7 +23,7 @@ ChartJS.register(
 export const ActivityTimeChart = (props) => {
     
     const allEvents = props.allEvents;
-    const labels = ['Activity'];
+    const labels = [''];
 
     // This is 2022, use to display only data for 2022 
     // const currentYear = new Date(Date.now()).getFullYear();
@@ -143,7 +143,7 @@ export const ActivityTimeChart = (props) => {
         }
     
     const getHeight = () => {
-        if (window.screen.width <= 640) {
+        if (window.screen.width <= 480) {
             return 500;
         }
         return '';
